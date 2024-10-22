@@ -50,7 +50,7 @@ class _LandingpageState extends State<Landingpage> {
                 Positioned(
                   top: 0,
                   child: SizedBox(
-                    width: 1400,
+                    width: MediaQuery.of(context).size.width,
                     child: MenuBarHome(
                       onMenuClick: _onMenuClick,
                     ),

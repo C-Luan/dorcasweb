@@ -49,7 +49,7 @@ class MenuBarHome extends StatelessWidget {
               TextButton(
                 onPressed: () => onMenuClick(5),
                 child: Text(
-                  'about',
+                  'Sobre nós',
                   style: _style,
                 ),
               ),

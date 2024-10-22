@@ -18,7 +18,7 @@ class InicioSection extends StatelessWidget {
                 // borderRadius: BorderRadius.circular(20),
                 // color: const Color.fromARGB(255, 49, 49, 49)
                 image: DecorationImage(
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                   image: AssetImage(
                     'assets/body/background.png',
                   ),
@@ -29,6 +29,7 @@ class InicioSection extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Center(
                   child: Container(
+                height: 500,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.contain,

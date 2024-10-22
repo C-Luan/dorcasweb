@@ -9,23 +9,34 @@ class ValoresSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlassMorphism(
-      start: 0.6,
-      end: 0.6,
+      start: 0.4,
+      end: 0.4,
       child: Card(
         elevation: 10,
         color: Colors.transparent,
         shadowColor: Colors.transparent,
         child: SizedBox(
-          width: 1000,
+          width: 1400,
           height: height,
-          child: Row(
+          child: const Row(
             children: [
               Flexible(
                 child: ListTile(
                   tileColor: Colors.transparent,
-                  title: Text('Missão'),
+                  title: Text(
+                    'Missão\n',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
                   subtitle: Text(
-                      'Loren epsum Loren epsum Loren epsum Loren epsumLoren epsum Loren epsum'),
+                    'Transformar ideias em peças únicas, com excelência e precisão para empresas.',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ),
               Padding(
@@ -35,9 +46,20 @@ class ValoresSection extends StatelessWidget {
               Flexible(
                 child: ListTile(
                   tileColor: Colors.transparent,
-                  title: Text('Visão'),
+                  title: Text(
+                    'Visão\n',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
                   subtitle: Text(
-                      'Loren epsum Loren epsum Loren epsum Loren epsumLoren epsum Loren epsum'),
+                    'Ser referência em soluções de corte e costura sob medida para o mercado corporativo.',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ),
               Padding(
@@ -47,9 +69,18 @@ class ValoresSection extends StatelessWidget {
               Flexible(
                 child: ListTile(
                   tileColor: Colors.transparent,
-                  title: Text('Valores'),
+                  title: Text('Valores\n',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      )),
                   subtitle: Text(
-                      'Loren epsum Loren epsum Loren epsum Loren epsumLoren epsum Loren epsum'),
+                    'Qualidade, inovação, compromisso e atendimento personalizado.',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ),
             ],
