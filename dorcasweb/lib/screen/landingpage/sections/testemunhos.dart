@@ -11,7 +11,7 @@ class TestemunhosSections extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Center(
+        const Center(
           child: Text(
             'O que nossos clientes estão falando',
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
@@ -25,57 +25,40 @@ class TestemunhosSections extends StatelessWidget {
             child: SizedBox(
               height: height,
               width: MediaQuery.of(context).size.width * .9,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   SizedBox(
                     width: 300,
                     height: 250,
                     child: CardTestemunhos(
-                      cliente: 'Cliente 1',
+                      cliente: 'MTS SEGURANÇA LTDA',
+                      pathasset: 'assets/clientes/mtsseguranca.png',
                       rating: 5,
                       testemunho:
-                          'LorenEpsun LorenEpsun LorenEpsun LorenEpsun LorenEpsunLorenEpsunLorenEpsun LorenEpsunLorenEpsunLorenEpsunLorenEpsun LorenEpsun vLorenEpsunLorenEpsun',
+                          'Exelente fornecedor, atende aos prazos criteriozamente! sempre prezando pela qualidade ',
                     ),
                   ),
                   SizedBox(
                     width: 300,
                     height: 250,
                     child: CardTestemunhos(
-                      cliente: 'Cliente 2',
+                      cliente: 'RMTS SERVIÇOS LTDA',
+                      pathasset: 'assets/clientes/rmtsservicos.png',
                       rating: 4.75,
                       testemunho:
-                          'LorenEpsun LorenEpsun LorenEpsun LorenEpsun LorenEpsunLorenEpsunLorenEpsun LorenEpsunLorenEpsunLorenEpsunLorenEpsun LorenEpsun vLorenEpsunLorenEpsun',
+                          'Qualidade dos materias entregue, sempre de forma impecável.',
                     ),
                   ),
                   SizedBox(
                     width: 300,
                     height: 250,
                     child: CardTestemunhos(
-                      cliente: 'Cliente 3',
+                      cliente: 'JR ESATA',
+                      pathasset: 'assets/clientes/jresata.png',
                       rating: 4.5,
                       testemunho:
-                          'LorenEpsun LorenEpsun LorenEpsun LorenEpsun LorenEpsunLorenEpsunLorenEpsun LorenEpsunLorenEpsunLorenEpsunLorenEpsun LorenEpsun vLorenEpsunLorenEpsun',
-                    ),
-                  ),
-                  SizedBox(
-                    width: 300,
-                    height: 250,
-                    child: CardTestemunhos(
-                      cliente: 'Cliente 1',
-                      rating: 5,
-                      testemunho:
-                          'LorenEpsun LorenEpsun LorenEpsun LorenEpsun LorenEpsunLorenEpsunLorenEpsun LorenEpsunLorenEpsunLorenEpsunLorenEpsun LorenEpsun vLorenEpsunLorenEpsun',
-                    ),
-                  ),
-                  SizedBox(
-                    width: 300,
-                    height: 250,
-                    child: CardTestemunhos(
-                      cliente: 'Cliente 1',
-                      rating: 5,
-                      testemunho:
-                          'LorenEpsun LorenEpsun LorenEpsun LorenEpsun LorenEpsunLorenEpsunLorenEpsun LorenEpsunLorenEpsunLorenEpsunLorenEpsun LorenEpsun vLorenEpsunLorenEpsun',
+                          'Clientes desde 2024, sempre nos atendendo dentro das normas de qualidade exigida para o ambiente de trabalho interno e externo',
                     ),
                   ),
                 ],
@@ -93,10 +76,12 @@ class CardTestemunhos extends StatelessWidget {
       {super.key,
       required this.cliente,
       required this.testemunho,
+      required this.pathasset,
       required this.rating});
   final String cliente;
   final String testemunho;
   final double rating;
+  final String pathasset;
   @override
   Widget build(BuildContext context) {
     return GlassMorphism(
@@ -110,17 +95,23 @@ class CardTestemunhos extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              CircleAvatar(
+                maxRadius: 48,
+                minRadius: 30,
+                backgroundColor: Colors.white,
+                child: Image.asset(pathasset),
+              ),
               StarRating(
                 rating: rating,
                 allowHalfRating: false,
               ),
               ListTile(
                 title: Text(cliente,
-                    style:
-                        TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.bold)),
                 subtitle: Text(testemunho,
                     textAlign: TextAlign.justify,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w400,
                     )),
               ),
