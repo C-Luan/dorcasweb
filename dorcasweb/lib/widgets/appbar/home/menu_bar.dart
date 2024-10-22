@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class MenuBarHome extends StatelessWidget {
   final ValueChanged<int> onMenuClick;
-  const MenuBarHome({super.key, required this.onMenuClick});
-
+  MenuBarHome({super.key, required this.onMenuClick});
+  final TextStyle _style = TextStyle(color: Colors.white);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,38 +14,43 @@ class MenuBarHome extends StatelessWidget {
           const Image(
               height: 100,
               image: AssetImage(
-                'assets/logo/logo-sem-fundo.png',
+                'assets/body/prancheta.png',
               )),
           Row(
             children: [
               TextButton(
                 onPressed: () => onMenuClick(1),
-                child: const Text(
+                child: Text(
                   'Início',
+                  style: _style,
                 ),
               ),
               TextButton(
                 onPressed: () => onMenuClick(2),
-                child: const Text(
+                child: Text(
                   'Valores',
+                  style: _style,
                 ),
               ),
               TextButton(
                 onPressed: () => onMenuClick(3),
-                child: const Text(
+                child: Text(
                   'Serviços',
+                  style: _style,
                 ),
               ),
               TextButton(
                 onPressed: () => onMenuClick(4),
-                child: const Text(
+                child: Text(
                   'Feedback',
+                  style: _style,
                 ),
               ),
               TextButton(
                 onPressed: () => onMenuClick(5),
-                child: const Text(
+                child: Text(
                   'about',
+                  style: _style,
                 ),
               ),
             ],

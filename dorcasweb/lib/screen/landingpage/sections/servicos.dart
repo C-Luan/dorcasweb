@@ -1,3 +1,4 @@
+import 'package:dorcasweb/styles/glass.dart';
 import 'package:flutter/material.dart';
 
 class ServicosPrestados extends StatelessWidget {
@@ -21,37 +22,137 @@ class ServicosPrestados extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: SizedBox(
               height: height,
-              width: 1200,
+              width: 2000,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   SizedBox(
-                    width: 300,
-                    height: 250,
-                    child: Card(
-                      child: _cardServico(
-                        title: 'LorenEpsun',
-                        subtitle: 'Loren Epsun',
+                    width: 375,
+                    height: 350,
+                    child: InkWell(
+                      // borderRadius: BorderRadius.circular(24),
+                      onTap: () {},
+                      child: SizedBox(
+                        width: 300,
+                        height: 400,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(23),
+                            image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                  'assets/servicos/administrativo.png'),
+                            ),
+                          ),
+                          child: _cardServico(
+                            title: 'Administração',
+                            subtitle: '',
+                          ),
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 300,
-                    height: 250,
-                    child: Card(
-                      child: _cardServico(
-                        title: 'LorenEpsun',
-                        subtitle: 'Loren Epsun',
+                    width: 375,
+                    height: 350,
+                    child: InkWell(
+                      // borderRadius: BorderRadius.circular(24),
+                      onTap: () {},
+                      child: SizedBox(
+                        width: 300,
+                        height: 400,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(23),
+                            image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image:
+                                  AssetImage('assets/servicos/vigilantes.png'),
+                            ),
+                          ),
+                          child: _cardServico(
+                            title: 'Vigilantes',
+                            subtitle: '',
+                          ),
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 300,
-                    height: 250,
-                    child: Card(
-                      child: _cardServico(
-                        title: 'LorenEpsun',
-                        subtitle: 'Loren Epsun',
+                    width: 375,
+                    height: 350,
+                    child: InkWell(
+                      // borderRadius: BorderRadius.circular(24),
+                      onTap: () {},
+                      child: SizedBox(
+                        width: 300,
+                        height: 400,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(23),
+                            image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                  'assets/servicos/agenteportaria.png'),
+                            ),
+                          ),
+                          child: _cardServico(
+                            title: 'Agente de Portaria',
+                            subtitle: '',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 375,
+                    height: 350,
+                    child: InkWell(
+                      // borderRadius: BorderRadius.circular(24),
+                      onTap: () {},
+                      child: SizedBox(
+                        width: 300,
+                        height: 400,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(23),
+                            image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                  'assets/servicos/servicosgeraiserecepcao.png'),
+                            ),
+                          ),
+                          child: _cardServico(
+                            title: 'Serviços Gerais e Recepção',
+                            subtitle: '',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 375,
+                    height: 350,
+                    child: InkWell(
+                      // borderRadius: BorderRadius.circular(24),
+                      onTap: () {},
+                      child: SizedBox(
+                        width: 300,
+                        height: 400,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(23),
+                            image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                  'assets/servicos/macacaocomum.png'),
+                            ),
+                          ),
+                          child: _cardServico(
+                            title: 'Macacão Comum',
+                            subtitle: '',
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -68,18 +169,16 @@ class ServicosPrestados extends StatelessWidget {
     return Stack(
       alignment: AlignmentDirectional.bottomCenter,
       children: [
-        Card(
-          color: Colors.grey,
-          child: SizedBox(
-            width: 230,
-            child: ListTile(),
-          ),
-        ),
-        Card(
-          color: Colors.white,
-          child: ListTile(
-            title: Text(title),
-            subtitle: Text(subtitle),
+        GlassMorphism(
+          start: 0.6,
+          end: 0.6,
+          child: Card(
+            color: Colors.transparent,
+            shadowColor: Colors.transparent,
+            child: ListTile(
+              title: Text(title),
+              subtitle: Text(subtitle),
+            ),
           ),
         )
       ],

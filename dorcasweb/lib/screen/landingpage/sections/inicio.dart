@@ -15,36 +15,29 @@ class InicioSection extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: const Color.fromARGB(255, 49, 49, 49)
-                // image: DecorationImage(
-                //   fit: BoxFit.fill,
-                //   image: AssetImage(
-                //     'assets/images/header_solar.png',
-                //   ),
-                // ),
-                // shape: BoxShape.rectangle,
-              ),
-              height: 600,
-              width: MediaQuery.of(context).size.width * .9,
-              child: Center(
-                child: ListTile(
-                  title: Text(
-                    'Dorcas',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 26,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  subtitle: Text(
-                    '',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 36,
-                        fontWeight: FontWeight.w700),
+                // borderRadius: BorderRadius.circular(20),
+                // color: const Color.fromARGB(255, 49, 49, 49)
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(
+                    'assets/body/background.png',
                   ),
                 ),
+                // shape: BoxShape.rectangle,
               ),
+              height: height - 50,
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                  child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.contain,
+                    image: AssetImage(
+                      'assets/body/prancheta.png',
+                    ),
+                  ),
+                ),
+              )),
             )
           ],
         ),
