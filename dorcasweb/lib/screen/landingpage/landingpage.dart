@@ -1,3 +1,4 @@
+import 'package:dorcasweb/screen/landingpage/sections/clientes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -75,9 +76,10 @@ class _LandingpageState extends State<Landingpage> {
             ),
             ServicosPrestados(key: servicosSectionController, height: 400),
             const SizedBox(
-              height: 100,
+              height: 30,
             ),
-            TestemunhosSections(key: feedbackSectionController, height: 400),
+            ClientesSections(key: feedbackSectionController, height: 800),
+            // TestemunhosSections(key: feedbackSectionController, height: 400),
             SobreSection(key: sobreSectionController, height: 300)
           ],
         ),
