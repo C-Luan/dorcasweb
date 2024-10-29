@@ -17,6 +17,9 @@ class TestemunhosSections extends StatelessWidget {
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
         ),
+        SizedBox(
+          height: 50,
+        ),
         Scrollbar(
           controller: scrollController,
           interactive: true,
@@ -24,13 +27,13 @@ class TestemunhosSections extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: SizedBox(
               height: height,
-              width: MediaQuery.of(context).size.width * .9,
+              width: 1800,
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   SizedBox(
                     width: 300,
-                    height: 250,
+                    height: 350,
                     child: CardTestemunhos(
                       cliente: 'MTS SEGURANÇA LTDA',
                       pathasset: 'assets/clientes/mtsseguranca.png',
@@ -41,7 +44,7 @@ class TestemunhosSections extends StatelessWidget {
                   ),
                   SizedBox(
                     width: 300,
-                    height: 250,
+                    height: 350,
                     child: CardTestemunhos(
                       cliente: 'RMTS SERVIÇOS LTDA',
                       pathasset: 'assets/clientes/rmtsservicos.png',
@@ -52,13 +55,33 @@ class TestemunhosSections extends StatelessWidget {
                   ),
                   SizedBox(
                     width: 300,
-                    height: 250,
+                    height: 350,
                     child: CardTestemunhos(
                       cliente: 'JR ESATA',
                       pathasset: 'assets/clientes/jresata.png',
                       rating: 4.5,
                       testemunho:
                           'Clientes desde 2024, sempre nos atendendo dentro das normas de qualidade exigida para o ambiente de trabalho interno e externo',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 300,
+                    height: 350,
+                    child: CardTestemunhos(
+                      cliente: 'COMPLY SERVIÇOS',
+                      pathasset: 'assets/clientes/comply.png',
+                      rating: 4.5,
+                      testemunho: '',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 300,
+                    height: 350,
+                    child: CardTestemunhos(
+                      cliente: 'LSG SKYCHEFS',
+                      pathasset: 'assets/clientes/skychefs.png',
+                      rating: 4.5,
+                      testemunho: '',
                     ),
                   ),
                 ],
@@ -96,7 +119,7 @@ class CardTestemunhos extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircleAvatar(
-                maxRadius: 48,
+                maxRadius: 58,
                 minRadius: 30,
                 backgroundColor: Colors.white,
                 child: Image.asset(pathasset),

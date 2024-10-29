@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SobreSection extends StatelessWidget {
   const SobreSection({super.key, required this.height});
@@ -27,10 +28,16 @@ class SobreSection extends StatelessWidget {
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        await _launchUrl(Uri.parse(
+                            'https://wa.me/55919999067493?text=${Uri.parse('Olá! tenho enteresse em solicitar uma cotação')}'));
+                      },
                       child: Text('Dilma Cruz: (91) 99906-7493')),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        await _launchUrl(Uri.parse(
+                            'https://wa.me/5591984519284?text=${Uri.parse('Olá! tenho enteresse em solicitar uma cotação')}'));
+                      },
                       child: Text('Erevaldo Cruz: (91) 98451-9284')),
                 ],
               ),
@@ -55,5 +62,11 @@ class SobreSection extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _launchUrl(Uri url) async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/appbar/home/menu_bar.dart';
 import 'sections/about.dart';
@@ -32,12 +35,14 @@ class _LandingpageState extends State<Landingpage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 239, 239, 245),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.arrow_upward),
-        onPressed: () => scrollcontroller.animateTo(
-          Offset.zero.dy,
-          duration: const Duration(milliseconds: 500),
-          curve: Curves.easeInOut,
-        ),
+        backgroundColor: Colors.green,
+        child: const Icon(FontAwesomeIcons.whatsapp),
+        onPressed: () async {
+          if (!await launchUrl(Uri.parse(
+              'https://wa.me/5591984519284?text=${Uri.parse('Olá! tenho enteresse em solicitar uma cotação')}'))) {
+            throw Exception('Could not launch ');
+          }
+        },
       ),
       body: SingleChildScrollView(
         controller: scrollcontroller,
@@ -70,7 +75,7 @@ class _LandingpageState extends State<Landingpage> {
             ),
             ServicosPrestados(key: servicosSectionController, height: 400),
             const SizedBox(
-              height: 30,
+              height: 100,
             ),
             TestemunhosSections(key: feedbackSectionController, height: 400),
             SobreSection(key: sobreSectionController, height: 300)

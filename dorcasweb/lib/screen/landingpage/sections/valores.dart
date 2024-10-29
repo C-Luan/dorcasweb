@@ -24,7 +24,7 @@ class ValoresSection extends StatelessWidget {
                 child: ListTile(
                   tileColor: Colors.transparent,
                   title: Text(
-                    'Missão\n',
+                    'Visão\n',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -47,7 +47,7 @@ class ValoresSection extends StatelessWidget {
                 child: ListTile(
                   tileColor: Colors.transparent,
                   title: Text(
-                    'Visão\n',
+                    'Missão\n',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
