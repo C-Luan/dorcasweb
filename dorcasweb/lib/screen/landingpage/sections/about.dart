@@ -24,13 +24,25 @@ class SobreSection extends StatelessWidget {
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
                   Text('Rua Lauro Pompeu Nº357, Icui Laranjeira'),
                   Text('CEP: 67125-117\n'),
+                  TextButton(
+                    onPressed: () async {
+                      final Uri emailUri = Uri(
+                        scheme: 'mailto',
+                        path: 'comercial@dorcasservicos.com.br', // Destinatário
+                        query: Uri.encodeQueryComponent(
+                            'subject=Contato&body=Olá! tenho enteresse em solicitar uma cotação'),
+                      );
+                      await _launchUrl(emailUri);
+                    },
+                    child: Text('Email: comercial@dorcasservicos.com.br\n'),
+                  ),
                   Text('Contatos:\n',
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
                   TextButton(
                       onPressed: () async {
                         await _launchUrl(Uri.parse(
-                            'https://wa.me/55919999067493?text=${Uri.parse('Olá! tenho enteresse em solicitar uma cotação')}'));
+                            'https://wa.me/5591999067493?text=${Uri.parse('Olá! tenho enteresse em solicitar uma cotação')}'));
                       },
                       child: Text('Dilma Cruz: (91) 99906-7493')),
                   TextButton(

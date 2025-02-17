@@ -112,6 +112,14 @@ class ClientesSections extends StatelessWidget {
                                   height: 84,
                                 ),
                               ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.asset(
+                                  'assets/clientes/guamaresiduos.png',
+                                  width: 85,
+                                  height: 84,
+                                ),
+                              ),
                             ]),
                       ),
                     )

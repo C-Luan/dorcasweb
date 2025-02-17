@@ -40,7 +40,7 @@ class _LandingpageState extends State<Landingpage> {
         child: const Icon(FontAwesomeIcons.whatsapp),
         onPressed: () async {
           if (!await launchUrl(Uri.parse(
-              'https://wa.me/5591984519284?text=${Uri.parse('Olá! tenho enteresse em solicitar uma cotação')}'))) {
+              'https://wa.me/5591999067493?text=${Uri.parse('Olá! tenho enteresse em solicitar uma cotação')}'))) {
             throw Exception('Could not launch ');
           }
         },
